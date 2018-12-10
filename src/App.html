@@ -1,26 +1,37 @@
 <h1>Hello {name}!</h1>
 <a href="https://www.masontmorrow.com/">My website</a>
 <table>
-	<tr>
-		<th>One Level</th>
-		<th>Two Level</th>
-		<th>Three Level</th>
-	</tr>
-	<tr>
-		<td>Test 1</td>
-		<td>Test 2</td>
-		<td>Test 3</td>
-	</tr>
-	<tr>
-		<td>Test 4</td>
-		<td>Test 5</td>
-		<td>Test 6 </td>
-	</tr>
-	<tr>
-		<td>Test 7</td>
-		<td>Test 8</td>
-		<td>Test 9</td>
-	</tr>
+	<thead>
+		<tr>
+			<th>One Level</th>
+			<th>Two Level</th>
+			<th>Three Level</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Test 1</td>
+			<td>Test 2</td>
+			<td>Test 3</td>
+		</tr>
+		<tr>
+			<td>Test 4</td>
+			<td>Test 5*</td>
+			<td>Test 6 </td>
+		</tr>
+		<tr>
+			<td>Test 7</td>
+			<td>Test 8</td>
+			<td>Test 9</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="3">
+				<p>* A footnote goes here</p>
+			</td>
+		</tr>
+	</tfoot>
 </table>
 
 <div class="form-container">
@@ -35,7 +46,8 @@
 		margin: 10px;
 		border-collapse: collapse;
 		width: 100%;
-		max-width: 500px;
+		max-width: 600px;
+		border-radius: 4px;
 	}
 	tr {
 		text-align: left;
@@ -43,13 +55,22 @@
 	td, th {
 		margin: 2px 10px;
 		padding: 10px;
+		width: calc(100% / 3);
 	}
-	tr:nth-child(even) {
+	tbody > tr:nth-child(odd) {
 		background: rgb(220, 245, 255);
 	}
-	tr:hover {
+	tbody tr:hover {
 		background: rgb(174, 174, 174);
 		cursor: crosshair;
+	}
+	tfoot td {
+		width: 100%;
+		background: rgb(245, 250, 252);
+	}
+	tfoot p {
+		margin: 0;
+		color: black;
 	}
 </style>
 
