@@ -1,0 +1,24 @@
+<form action="submit">
+    <label for="First Name">First Name</label>
+    <input type="text" name="First Name">
+    <label for="Last Name">Last Name</label>
+    <input type="text" name="Last Name">
+    <label for="message">Message</label>
+    <textarea name="message" cols="30" rows="10"></textarea>
+    <button>Send</button>
+</form>
+
+<style>
+    form {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        max-width: 400px;
+        align-content: flex-end;
+    }
+
+    form button {
+        width: 100px;
+        align-self: flex-end;
+    }
+</style>    

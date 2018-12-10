@@ -1,8 +1,63 @@
 <h1>Hello {name}!</h1>
 <a href="https://www.masontmorrow.com/">My website</a>
+<table>
+	<tr>
+		<th>One Level</th>
+		<th>Two Level</th>
+		<th>Three Level</th>
+	</tr>
+	<tr>
+		<td>Test 1</td>
+		<td>Test 2</td>
+		<td>Test 3</td>
+	</tr>
+	<tr>
+		<td>Test 4</td>
+		<td>Test 5</td>
+		<td>Test 6 </td>
+	</tr>
+	<tr>
+		<td>Test 7</td>
+		<td>Test 8</td>
+		<td>Test 9</td>
+	</tr>
+</table>
+
+<div class="form-container">
+	<Form />
+</div>
 
 <style>
 	h1 {
 		color: purple;
 	}
+	table {
+		margin: 10px;
+		border-collapse: collapse;
+		width: 100%;
+		max-width: 500px;
+	}
+	tr {
+		text-align: left;
+	}
+	td, th {
+		margin: 2px 10px;
+		padding: 10px;
+	}
+	tr:nth-child(even) {
+		background: rgb(220, 245, 255);
+	}
+	tr:hover {
+		background: rgb(174, 174, 174);
+		cursor: crosshair;
+	}
 </style>
+
+<script>
+	import Form from "./components/Form.html";
+	export default {
+		components: {
+			Form
+		}
+	}
+</script>
